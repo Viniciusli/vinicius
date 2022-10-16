@@ -14,7 +14,7 @@
     </header>
 </section>
 
-<section class="max-w-5xl mx-auto mt-16 grid grid-rows-3 grid-cols-3 content-center p-6 h-[500px] font-sans">
+<section class="max-w-5xl mx-auto mt-16 grid grid-rows-3 grid-cols-3 content-center p-6 h-[100vh] font-sans">
     <About />
 </section>
 
