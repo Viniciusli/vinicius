@@ -5,20 +5,17 @@
 
 html,
 body {
-  height: 100%;
-  background-color: #f5f7f8;
-  color: black;
-}
-
-* {
-  background-color: #f5f7f8;
-}
-
-.subtext {
-  width: 70%;
-  font-size: large;
+  width: 100%;
 }
 
 .card {
   width: 10rem;
+  background-color: #f5f7f8;
+}
+
+:root {
+  // FEFFFF
+  // F7F9FB
+  background-color: #F7F9FB;
+  color: black;
 }
