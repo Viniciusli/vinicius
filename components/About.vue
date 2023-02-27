@@ -2,7 +2,8 @@
     <div class="col-span-3 row-span-2"
       data-aos="zoom-in"
       data-aos-duration="1500"
-      data-aos-delay='500'>
+      data-aos-delay="500"
+    >
         <div class="font-sans">
             <h1 class="text-lg lg:text-2xl">Hey there, I´m <span class="text-[rgba(106,0,255,.94)] underline">Vinicius Lee</span></h1>
             <h1
@@ -19,30 +20,28 @@
     </div>
 </template>
 
-<script>
-export default {
-  mounted: function () {
+<script setup>
+  import { onMounted, onBeforeUnmount, ref } from 'vue';
+
+  let x = ref(200)
+
+  function ramdomNumber() {
+    x.value = (x.value <= 2000)
+          ? x.value + 1
+          : 200
+          
+  }
+
+  onMounted(() => {
     setInterval(() => {
-        this.ramdomNumber()
+      ramdomNumber()
     }, 100)
-  },
-  data() {
-    return {
-      x: 200
-    }
-  },
-  methods: {
-    ramdomNumber() {
-        this.x = (this.x <= 2000)
-                    ? this.x + 1
-                    : 200
-        // this.x =  Math.floor(Math.random() * (1162 - 209) + 209)
-    }
-  },
-  beforeDestroy() {
-    clearInterval(this.x)
-  },
-}
+  })
+
+  onBeforeUnmount(() => {
+    clearInterval(x)
+  })
+
 </script>
 
 <style>
